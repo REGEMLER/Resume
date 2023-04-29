@@ -55,8 +55,6 @@ body{
     background-color: var(--dark);
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
-    z-index: 2;
 }
 
 .header__nav{
@@ -166,6 +164,7 @@ body{
 }
 
 .course{
+    width: 90%;
     margin: 10px auto;
     align-self: flex-start;
     padding: 0 10px;
@@ -208,9 +207,10 @@ body{
 
 
 .skils{
+    width: 90%;
+    margin: 0;
     align-self: flex-start;
     padding: 0 10px;
-
 }
 
 .list__skils{
@@ -530,118 +530,115 @@ input:checked + label .lang__title{
 
 @media screen and (max-width:767px) {
 
-    .wrapper{
+    .title{
+        text-align: center;
+    }
+
+    .burger{
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 22px;
+        width: 30px;
+        position: relative;
+        z-index: 50;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 10%;
+        transition: transform linear 1s;
+    }
+
+    .burger__active{
+        transform: rotateZ(90deg);
+    }
+
+    .burger__item{
+        width: 30px;
+        height: 2px;
+        background-color: var(--light);
+    }
+
+    .header__menu{
+        min-width: 320px;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        transition: height linear 1s;
+    }
+
+    .header__menu__active{
+        height: 100vh;
+        opacity: 1;
+        visibility: visible;
+        transition: height linear 1s;
+    }
+
+    .header__menu__transition-slow{
+        transition: height linear 1s;
+    }
+
+    .header__menu__transition-fast{
+        transition: height linear .3s;
+    }
+
+    .header-nav li{
+        width: 95%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+
+    main{
         flex-direction: column;
     }
 
-.burger{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 22px;
-    width: 30px;
-    position: relative;
-    z-index: 50;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 10%;
-    transition: transform linear 1s;
-}
+    aside{
+        margin-right: 0;
+        width: 100%;
+    }
 
-.burger__active{
-    transform: rotateZ(90deg);
-}
+    .contacts{
+        align-self: center;
+    }
 
-.burger__item{
-    width: 30px;
-    height: 2px;
-    background-color: var(--light);
-}
+    .course{
+        align-self: center;
+    }
 
-.header__menu{
-    min-width: 320px;
-    height: 100vh;
-    position: absolute;
-    top: -10%;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 10;
-}
+    .skils{
+        align-self: center;
+    } 
 
-.header__menu__active{
-    top: 30%;
-    z-index: 60;
-    background-color: var(--dark);
+    .experience__carusel{
+        max-width: 200px;
+    }
 
-    transition: top linear 1s;
-}
+    .experience__card{
+        margin: 0 10px;
+    }
 
-.header__menu__transition-slow{
-    transition: top linear 1s;
-}
+    .experience__card2,
+    .experience__card3{
+        display: none;
+    }
 
-.header__menu__transition-fast{
-    transition: top linear .3s;
-}
+    .carusel-left{
+        animation-name: slider-left-small;
+        animation-duration: 1s;
+    }
 
-.header-nav li{
-    width: 95%;
-    text-align: center;
-    align-self: center;
-    align-content: center;
-}
+    .carusel-right{
+        animation-name: slider-right-small;
+        animation-duration: 1s;
+    }
 
-main{
-    flex-direction: column;
-}
-
-aside{
-    margin-right: 0;
-}
-
-.contacts{
-    align-self: center;
-}
-
-.course{
-    align-self: center;
-}
-
-.skils{
-    align-self: center;
-} 
-
-.experience__carusel{
-    max-width: 200px;
-}
-
-.experience__card{
-    margin: 0 10px;
-}
-
-.experience__card2,
-.experience__card3{
-    display: none;
-}
-
-.carusel-left{
-    animation-name: slider-left-small;
-    animation-duration: 1s;
-}
-
-.carusel-right{
-    animation-name: slider-right-small;
-    animation-duration: 1s;
-}
-
-
-
-.footer-inner{
-    flex-direction: column;
-}
+    .footer-inner{
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:500px){
