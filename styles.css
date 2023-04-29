@@ -26,6 +26,10 @@ a{
     text-decoration: none;
 }
 
+input{
+    display: none;
+}
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -51,6 +55,8 @@ body{
     background-color: var(--dark);
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+    z-index: 2;
 }
 
 .header__nav{
@@ -58,6 +64,7 @@ body{
     padding: 15px;
     margin: 0 auto;
     min-height: 30px;
+    height: auto;
     position: relative;
 }
 
@@ -189,7 +196,7 @@ body{
     font-size: 16px;
     margin: 5px 0;
     padding: 10px;
-    color: var(--light);
+    color: white;
     border-radius: 4px;
     background-color: var(--Light);
     transition:  background-color .5s linear;
@@ -216,7 +223,7 @@ body{
     font-size: 16px;
     margin: 5px 0;
     padding: 10px;
-    color: var(--light);
+    color:white;
     border-radius: 4px;
     background-color: var(--Light);
 } 
@@ -251,35 +258,143 @@ body{
     margin-bottom: 10px;
 }
 
-.list_works{
+.list__works{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
-.experience li{
-    transition: all linear .4s;
+
+.arrow{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--Light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:  background-color linear 0.7s, transform linear 0.7s;
 }
-.experience li:hover{
-    transform: scale(1.1);
+
+.arrow:hover{
+    transform: scale(1.05);
+    background-color:var(--Lighther);
 }
-.experience a{
-    display: inline-block;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.arrow:active{
+    transform: scale(0.95);
+}
+
+.arrow img{
+    width: 14px;
+    height: 6px;
+}
+
+.experience__carusel{
+    max-width: 810px;
+    overflow: hidden;
+}
+
+.experience__inner{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.experience__section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.experience__card{
+    width: 200px;
+    height: 300px;
+    margin: 0 20px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light);
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background-color linear 1s;
+}
+
+.experience__img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.experience__img img{
+    width: 100%;
+    height: 100%;;
+}
+
+.experience__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
-    color: var(--light);
-    border-radius: 2px;
+    width: 80px;
+    margin: 30px auto;
+    height: 20px;
+    color: white;
+    padding: 15px 45px;
+    border-radius: 100px;
     background-color: var(--Light);
-    transition: all .3s linear;
-    padding: 10px;
-    margin-bottom: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition:  background-color linear 0.7s, transform linear 0.7s;
 }
-.experience a:hover{
-    text-decoration: underline;
+
+.experience__link:hover{
+    transform: scale(1.1);
+    background-color: var(--Lighther);
+}
+
+@keyframes slider-right{
+    from{ left: 0px;}
+    to{left: -810px;} 
+}
+
+@keyframes slider-right-small{
+    from{ left: 0px;}
+    to{left: -200px;} 
+}
+
+@keyframes slider-left{
+    from{ left: 0px;}
+    to{left: 810px;} 
+}
+
+@keyframes slider-left-small{
+    from{ left: 0px;}
+    to{left: 200px;} 
+}
+
+.carusel-left{
+    animation-name: slider-left;
+    animation-duration: 2s;
+}
+
+.carusel-right{
+    animation-name: slider-right;
+    animation-duration: 2s;
+}
+
+.experience__back, .experience__forward{
+    opacity: 0;
+}
+
+.slide__animated{
+    opacity: 1;
 }
 
 .code{
     width: 90%;
-    margin: 20px auto;
+    margin: 10px 0;
     align-self: flex-start;
     padding: 20px;
     background-color: var(--light);
@@ -322,20 +437,67 @@ body{
     padding: 10px;
 }
 
-.languages__list dt{
+.languages__list{
+    width: 90%;
+    background-color: var(--light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lang__item{
+    width: 100%;
+    margin: 10px;
+}
+
+.lang__title{
     font-size: 18px;
     font-weight: 600;
-    color: var(--light);
-    border-radius: 2px;
+    color: white;
+    border-radius: 5px;
     background-color: var(--Light);
     padding: 10px;
 }
 
-.list-languages dd{
+.lang__body{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer inherit;
+    background-color: var(--light);
+}
+
+.lang__text{
+    width: 100%;
     font-size: 16px;
     color: var(--dark);
-    background-color: var(--light);
-    padding: 10px;
+}
+
+.lang__item:hover .lang__body{
+    height: auto;
+    padding: 1rem;
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+    transition: all linear 0.6s;
+}
+
+input:checked + label .lang__body{
+    height: auto;
+    padding: 1rem;
+    visibility: visible;
+    opacity: 1;
+    cursor: pointer;
+    transition: all linear 0.6s;
+}
+
+input:checked + label .lang__title{
+    color: var(--dark);
+    background-color: rgb(209, 209, 31);
+    transition: all linear 0.6s;
 }
 
 .header{
@@ -368,6 +530,11 @@ body{
 
 @media screen and (max-width:767px) {
 
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
 .burger{
     display: flex;
     flex-direction: column;
@@ -394,35 +561,108 @@ body{
 }
 
 .header__menu{
+    min-width: 320px;
+    height: 100vh;
+    position: absolute;
+    top: -10%;
     flex-direction: column;
-    margin: 0;
-    transition: height .3s linear;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
 }
+
+.header__menu__active{
+    top: 30%;
+    z-index: 60;
+    background-color: var(--dark);
+
+    transition: top linear 1s;
+}
+
+.header__menu__transition-slow{
+    transition: top linear 1s;
+}
+
+.header__menu__transition-fast{
+    transition: top linear .3s;
+}
+
 .header-nav li{
     width: 95%;
     text-align: center;
     align-self: center;
     align-content: center;
 }
+
 main{
     flex-direction: column;
 }
+
 aside{
     margin-right: 0;
 }
-.contants{
+
+.contacts{
     align-self: center;
 }
-.courses{
+
+.course{
     align-self: center;
 }
+
 .skils{
     align-self: center;
 } 
- .list_works{
-    flex-direction: column;
-} 
+
+.experience__carusel{
+    max-width: 200px;
+}
+
+.experience__card{
+    margin: 0 10px;
+}
+
+.experience__card2,
+.experience__card3{
+    display: none;
+}
+
+.carusel-left{
+    animation-name: slider-left-small;
+    animation-duration: 1s;
+}
+
+.carusel-right{
+    animation-name: slider-right-small;
+    animation-duration: 1s;
+}
+
+
+
 .footer-inner{
     flex-direction: column;
 }
+}
+
+@media screen and (max-width:500px){
+
+    .list__works{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .experience__carusel{
+        max-width: 335px;
+        order: -1;
+        flex-grow: 2
+    }
+
+    .experience__section{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .experience__card{
+        margin: 0;
+    }
 }
