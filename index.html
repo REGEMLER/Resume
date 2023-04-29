@@ -13,15 +13,15 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <nav>
-                <ul class="header__nav" id="header-nav">
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#contacts">Contants</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#course">Courses</a></li>
-                    <li><a href="#skils">Skils</a></li>
-                    <li><a href="#code">Code</a></li>
-                    <li><a href="#languages">Languages</a></li>
+            <nav class="header__nav">
+                <ul class="header__menu" id="header-menu">
+                    <li><a class="header__item" href="#about">About me</a></li>
+                    <li><a class="header__item" href="#contacts">Contacts</a></li>
+                    <li><a class="header__item" href="#experience">Experience</a></li>
+                    <li><a class="header__item" href="#course">Courses</a></li>
+                    <li><a class="header__item" href="#skils">Skils</a></li>
+                    <li><a class="header__item" href="#code">Code</a></li>
+                    <li><a class="header__item" href="#languages">Languages</a></li>
                 </ul>
                 <div class="burger" id="burger">
                     <span class="burger__item"></span>
@@ -32,9 +32,9 @@
         </header>
         <main class="main">
             <aside class="aside">
-                <div class="avatar"><img src="assets/IMG/87263562.jpeg" alt="avatar"></div>
+                <div class="avatar"><img src="assets/IMG/ava.png" alt="avatar"></div>
                 <div class="contacts" id="contacts">
-                    <h2>Contacts</h2>
+                    <h2 class="title aside__title">Contacts</h2>
                     <ul class="contacts__list">
                         <li><a class="contacts__link contacts__link1" href="mailto:anoraglar@gmail.com">anoraglar@gmail.com</a></li>
                         <li><a class="contacts__link contacts__link2" href="https://github.com/REGEMLER">github.com/REGEMLER</a></li>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="skils" id="skils">
                     <h2 class="title">Skills and Proficiency:</h2>
-                    <ul class="list_skils">
+                    <ul class="list__skils">
                         <li class="skils__item skils__item1">HTML5 3\10</li>
                         <li class="skils__item skils__item2">CSS 3\10</li>
                         <li class="skils__item skils__item3">CSS 3\10</li>
@@ -91,18 +91,6 @@
                         <li><a href="https://regemler.github.io/Plant/">FLowerShop</a></li>
                     </ul>
                 </div>
-                <div class="code" id="code">
-                    <h2 class="title">Code example</h2>
-                    <h3 class="code__subtitle">Task:</h3>
-                    <p class="text">Write a function that returns both the minimum and maximum number of the given list/array.</p>
-                    <pre class="pre"><code>
-                    <span class="blue">function</span> <span class="yellow">minMax</span>(arr){
-                        <span class="blue">let</span> <span class="green">min</span> = <span class="green">Math.</span> <span class="yellow">min.apply</span>(<span class="blue">null</span>, <span class="green">arr</span>);
-                        <span class="blue">let</span> <span class="green">max</span> = <span class="green">Math.</span> <span class="yellow">max.apply</span>(<span class="blue">null</span>, <span class="green">arr</span>);
-                        <span class="purple">return</span> [<span class="green">min</span>,<span class="green">max</span>]; 
-                    }
-                    </code></pre>
-                </div>
                 <div class="languages" id="languages">
                     <h2>Languages</h2>
                     <dl class="languages__list">
@@ -114,6 +102,18 @@
                         <dd>Native speaker</dd>
                     </dl>
                 </div>
+                <div class="code" id="code">
+                    <h2 class="title code__title">Code example</h2>
+                    <h3 class="code__subtitle">Task:</h3>
+                    <p class="text">Write a function that returns both the minimum and maximum number of the given list/array.</p>
+                    <pre class="pre"><code>
+                    <span class="blue">function</span> <span class="yellow">minMax</span>(arr){
+                        <span class="blue">let</span> <span class="green">min</span> = <span class="green">Math.</span> <span class="yellow">min.apply</span>(<span class="blue">null</span>, <span class="green">arr</span>);
+                        <span class="blue">let</span> <span class="green">max</span> = <span class="green">Math.</span> <span class="yellow">max.apply</span>(<span class="blue">null</span>, <span class="green">arr</span>);
+                        <span class="purple">return</span> [<span class="green">min</span>,<span class="green">max</span>]; 
+                    }
+                    </code></pre>
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -122,21 +122,6 @@
             </ul>
         </footer>
     </div>
-    <script>
-        const toggle = document.getElementById(`toggle`);
-        const menu = document.getElementById(`header-nav`);
-        toggle.addEventListener(`click`, () =>{
-            if( menu.style.opacity === `1` && menu.style.height === `300px`){
-                menu.style.height = `0`;
-                menu.style.visibility = `hidden`;
-                menu.style.opacity = `0`;
-
-            } else{
-                menu.style.height = `300px`;
-                menu.style.visibility = `visible`;
-                menu.style.opacity = `1`;
-                }
-            })
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
