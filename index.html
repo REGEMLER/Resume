@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Curriculum vitae</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav>
+                <ul class="header__nav" id="header-nav">
+                    <li><a href="#about">About me</a></li>
+                    <li><a href="#contacts">Contants</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#course">Courses</a></li>
+                    <li><a href="#skils">Skils</a></li>
+                    <li><a href="#code">Code</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                </ul>
+                <div class="burger" id="burger">
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                    <span class="burger__item"></span>
+                </div>
+            </nav>
+        </header>
+        <main class="main">
+            <aside class="aside">
+                <div class="avatar"><img src="assets/IMG/87263562.jpeg" alt="avatar"></div>
+                <div class="contacts" id="contacts">
+                    <h2>Contacts</h2>
+                    <ul class="contacts__list">
+                        <li><a class="contacts__link contacts__link1" href="mailto:anoraglar@gmail.com">anoraglar@gmail.com</a></li>
+                        <li><a class="contacts__link contacts__link2" href="https://github.com/REGEMLER">github.com/REGEMLER</a></li>
+                        <li><a class="contacts__link contacts__link3" href="https://vk.com/id671954926">vk.com/id671954926</a></li>
+                        <li><a class="contacts__link contacts__link4" href="https://ru.wikipedia.org/wiki/%D0%93%D0%BE%D0%BC%D0%B5%D0%BB%D1%8C">Belarus, Gomel</a></li>
+                    </ul>
+                </div>
+                <div class="course" id="course">
+                    <h2 class="title">Education and Courses</h2>
+                    <dl class="course__list">
+                        <dt class="course__item">SUKHOI STATE TECHNICAL UNIVERSITY OF GOMEL</dt>
+                        <dd class="course__name">Hydro-Pneumatic Systems of Mobile and Technological Machines</dd>
+                        <dd class="course__year">2014-2019</dd>
+                        <dt class="course__item">IT Step</dt>
+                        <dd class="course__name">Front-end developer</dd>
+                        <dd class="course__year">2021-2022</dd>
+                        <dt class="course__item">RS Schools Course</dt>
+                        <dd class="course__name">«JavaScript/Front-end. Stage 0»</dd>
+                        <dd class="course__year">2022</dd>
+                        <dt class="course__item">RS Schools Course</dt>
+                        <dd class="course__name">«JavaScript/Front-end. Stage 1»</dd>
+                        <dd class="course__year">2023</dd>
+                    </dl>
+                </div>
+                <div class="skils" id="skils">
+                    <h2 class="title">Skills and Proficiency:</h2>
+                    <ul class="list_skils">
+                        <li class="skils__item skils__item1">HTML5 3\10</li>
+                        <li class="skils__item skils__item2">CSS 3\10</li>
+                        <li class="skils__item skils__item3">CSS 3\10</li>
+                        <li class="skils__item skils__item4">CSS 3\10</li>
+                        <li class="skils__item skils__item5">CSS 3\10</li>
+                        <li class="skils__item skils__item6">CSS 3\10</li>
+                        <li class="skils__item skils__item7">CSS 3\10</li>
+                        <li class="skils__item skils__item8">CSS 3\10</li>
+                        <li class="skils__item skils__item9">CSS 3\10</li>
+                    </ul>
+                </div>
+            </aside>
+            <section class="section">
+                <div class="about" id="about">
+                    <h1 class="title main-title">Yaroslaw <span>Night</span></h1>
+                    <h2 class="title about-title">Junior Frontend Developer</h2>
+                    <h2 class="title">About Me</h2>
+                    <p class="text">I have started my career as a design engineer. I have worked a lot with systems like AutoCAD and KOMPAS 3D.</p>
+                    <p class="text">Now I am studying web technologies and programming languages like JavaScript and PHP. I want to become a proficient Frontend Developer.</p>
+                </div>
+                <div class="experience" id="experience">
+                    <h2 class="title">Experience</h2>
+                    <p class="text">I have done some little projects during my education: </p>
+                    <ul class="list_works">
+                        <li><a href="https://regemler.github.io/Cards/">GameMemo</a></li>
+                        <li><a href="https://regemler.github.io/ClothingStor">ClothingShop</a></li>
+                        <li><a href="https://regemler.github.io/Plant/">FLowerShop</a></li>
+                    </ul>
+                </div>
+                <div class="code" id="code">
+                    <h2 class="title">Code example</h2>
+                    <h3 class="code__subtitle">Task:</h3>
+                    <p class="text">Write a function that returns both the minimum and maximum number of the given list/array.</p>
+                    <pre class="pre"><code>
+                    <span class="blue">function</span> <span class="yellow">minMax</span>(arr){
+                        <span class="blue">let</span> <span class="green">min</span> = <span class="green">Math.</span> <span class="yellow">min.apply</span>(<span class="blue">null</span>, <span class="green">arr</span>);
+                        <span class="blue">let</span> <span class="green">max</span> = <span class="green">Math.</span> <span class="yellow">max.apply</span>(<span class="blue">null</span>, <span class="green">arr</span>);
+                        <span class="purple">return</span> [<span class="green">min</span>,<span class="green">max</span>]; 
+                    }
+                    </code></pre>
+                </div>
+                <div class="languages" id="languages">
+                    <h2>Languages</h2>
+                    <dl class="languages__list">
+                        <dt>English</dt>
+                        <dd>My level of English is in the range of B1 INTERMEDIATE to B2 UPPER INTERMEDIATE, according to the guidelines set by the CEFR.</dd>
+                        <dt>Spanish</dt>
+                        <dd>Spanish - my level of Spanish is B2 UPPER INTERMEDIATE, according to the guidelines set by the CEFR.</dd>
+                        <dt>Russian </dt>
+                        <dd>Native speaker</dd>
+                    </dl>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <ul class="footer-inner">
+                <li>Created in 2022</li>
+            </ul>
+        </footer>
+    </div>
+    <script>
+        const toggle = document.getElementById(`toggle`);
+        const menu = document.getElementById(`header-nav`);
+        toggle.addEventListener(`click`, () =>{
+            if( menu.style.opacity === `1` && menu.style.height === `300px`){
+                menu.style.height = `0`;
+                menu.style.visibility = `hidden`;
+                menu.style.opacity = `0`;
+
+            } else{
+                menu.style.height = `300px`;
+                menu.style.visibility = `visible`;
+                menu.style.opacity = `1`;
+                }
+            })
+    </script>
+</body>
+</html>
