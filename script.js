@@ -23,7 +23,6 @@ function moveMenuWithBurger(event){
      if(menu.classList.contains("header__menu__active")){
         menu.classList.add("header__menu__transition-slow");
         hideMenu(); 
-        setTimeout(overflowNav,1100);
         setTimeout(() => {
           menu.classList.remove("header__menu__transition-slow");
         },1100)
@@ -38,7 +37,6 @@ function hideMenuWithBody(){
      }   
      menu.classList.add("header__menu__transition-slow");
      hideMenu(); 
-     setTimeout(overflowNav,1100);
      setTimeout(() => {
        menu.classList.remove("header__menu__transition-slow");
      },1100)
