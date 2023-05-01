@@ -249,8 +249,11 @@ body{
     margin-bottom: 40px;
 }
 
-.about .text{
+.about__text{
+    width: 95%;
     font-size: 18px;
+    color: var(--dark);
+    text-indent: 40px;
 }
 
 .experience .text{
