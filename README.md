@@ -6,6 +6,7 @@
 - email: anoraglar@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/%D1%8F%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2-%D1%80%D1%8B%D1%87%D0%B8%D0%BA-56932023b/)
 - GitHub: [REGEMLER](https://github.com/REGEMLER)
+- [Read more...](https://regemler.github.io/Resume/)
 ***
 ## About Me
 I have started my career as a design engineer. I have worked a lot with systems like AutoCAD and KOMPAS 3D. 
