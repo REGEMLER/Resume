@@ -471,10 +471,6 @@ body{
     opacity: 0;
     cursor: pointer inherit;
     background-color: var(--light);
-}
-
-.lang__text{
-    width: 100%;
     font-size: 16px;
     color: var(--dark);
 }
@@ -485,21 +481,6 @@ body{
     visibility: visible;
     opacity: 1;
     cursor: pointer;
-    transition: all linear 0.6s;
-}
-
-input:checked + label .lang__body{
-    height: auto;
-    padding: 1rem;
-    visibility: visible;
-    opacity: 1;
-    cursor: pointer;
-    transition: all linear 0.6s;
-}
-
-input:checked + label .lang__title{
-    color: var(--dark);
-    background-color: rgb(209, 209, 31);
     transition: all linear 0.6s;
 }
 
@@ -531,7 +512,7 @@ input:checked + label .lang__title{
 }
 
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:900px) {
 
     .title{
         text-align: center;
@@ -610,6 +591,7 @@ input:checked + label .lang__title{
 
     .course{
         align-self: center;
+        text-align: center;
     }
 
     .skils{
