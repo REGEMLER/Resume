@@ -19,27 +19,27 @@ const experience = [
     },
     {
         "id": "4",
-        "name": "Plant Shop",
-        "img": "assets/IMG/Plant.png",
-        "link": "https://regemler.github.io/Plant/"
+        "name": "Nonogram game",
+        "img": "assets/IMG/Nonogram.png",
+        "link": "https://github.com/REGEMLER/Nonogram"
     },
     {
         "id": "5",
-        "name": "Restaurant",
-        "img": "assets/IMG/Restaurant.png",
-        "link": "https://regemler.github.io/Restaurant/"
+        "name": "Coffee-house",
+        "img": "assets/IMG/coffee.png",
+        "link": "https://regemler.github.io/coffee/coffee-house/"
     },
     {
         "id": "6",
-        "name": "Game SOS",
-        "img": "assets/IMG/SOS.png",
-        "link": "https://regemler.github.io/SOS/"
+        "name": "Library",
+        "img": "assets/IMG/library.png",
+        "link": "https://regemler.github.io/library/library/"
     },
     {
         "id": "7",
-        "name": "Traveland",
-        "img": "assets/IMG/Gaze.png",
-        "link": "https://regemler.github.io/Traveland/"
+        "name": "Cozy House",
+        "img": "assets/IMG/shelter.png",
+        "link": "https://regemler.github.io/Cozy-House/shelter/"
     },
     {
         "id": "8",
@@ -49,9 +49,9 @@ const experience = [
     },
     {
         "id": "9",
-        "name": "Duck Hunt",
-        "img": "assets/IMG/Duck.png",
-        "link": "https://regemler.github.io/Duck-Hunt/"
+        "name": "Minesweeper",
+        "img": "assets/IMG/minesweeper.png",
+        "link": "https://regemler.github.io/Minesweeper/minesweeper/"
     },
 ]
 
